@@ -2,6 +2,16 @@ from typing import List
 
 def insertionSort(array) -> List[int]:
   # Write your code here
+  l=len(array)
+  for i in range(1,l):
+    item=array[i]
+    currentitem=i-1
+    while ((array[currentitem]>item) and (currentitem>-1)):
+      array[currentitem+1]=array[currentitem]
+      currentitem=currentitem-1
+    array[currentitem+1]=item
+  return array  
+      
 
 # data = [9, 5, 1, 4, 3]
 input_data = input()
